@@ -1,25 +1,31 @@
 #!/bin/bash -x
-read -p "enter the 1st no" a
-read -p "enter the 2nd no" b
-read -p "enter the 3rd no" c
+read -p "enter the 1st no:" a
+read -p "enter the 2nd no:" b
+read -p "enter the 3rd no:" c
+
 function arthematic_Compute()
 {
   echo "$(( $a+$b*$c ))"
 }
-arthematic_Compute
+result[$((count++))]="$( arthematic_Compute $(($a,$b,$c)) )"
 
 function arthematic_Compute_second()
 {
   echo "$(( $a*$b+$c ))"
 }
-arthematic_Compute_second
+result[$((count++))]="$( arthematic_Compute_second $(($a,$b,$c)) )"
+
 function arthematic_Compute_third()
 {
   echo "$(( $c+$a/$b ))"
 }
-arthematic_Compute_third
+result[$((count++))]="$( arthematic_Compute_third $(($a,$b,$c)) )"
+
 function arthematic_Compute_fourth()
 {
   echo "$(( $a%$b+$c ))"
 }
-arthematic_Compute_fourth
+result[$((count++))]="$( arthematic_Compute_fourth $(($a,$b,$c)) )"
+
+echo "${result[@]}"
+echo "${!result[@]}"
