@@ -18,3 +18,8 @@ function arthematic_Compute_third()
   echo "$(( $c+$a/$b ))"
 }
 arthematic_Compute_third
+function arthematic_Compute_fourth()
+{
+  echo "$(( $a%$b+$c ))"
+}
+arthematic_Compute_fourth
