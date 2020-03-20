@@ -13,4 +13,8 @@ function arthematic_Compute_second()
   echo "$(( $a*$b+$c ))"
 }
 arthematic_Compute_second
-
+function arthematic_Compute_third()
+{
+  echo "$(( $c+$a/$b ))"
+}
+arthematic_Compute_third
