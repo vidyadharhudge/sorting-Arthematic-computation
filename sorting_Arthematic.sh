@@ -7,3 +7,10 @@ function arthematic_Compute()
   echo "$(( $a+$b*$c ))"
 }
 arthematic_Compute
+
+function arthematic_Compute_second()
+{
+  echo "$(( $a*$b+$c ))"
+}
+arthematic_Compute_second
+
