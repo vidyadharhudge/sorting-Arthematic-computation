@@ -35,3 +35,22 @@ do
      arr[i]=${result[$i]}
      echo "${arr[i]}"
 done
+
+function sorting_Array_inDecending_order()
+{
+   for (( i=0; i<4; i++ ))
+   do
+        for (( j=$i+1; j<4; j++ ))
+        do
+             if [[ ${arr[i]} -lt ${arr[j]} ]] 
+             then
+                  temp=${arr[i]}
+                  arr[i]=${arr[j]}
+                  arr[j]=$temp
+             fi
+        done
+   done
+              echo ${arr[@]}
+}
+res="$( sorting_Array_inDecending_order ${arr[@]} )"
+echo "decending order is :$res"
