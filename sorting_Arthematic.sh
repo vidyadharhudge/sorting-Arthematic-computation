@@ -3,29 +3,29 @@ read -p "enter the 1st no:" a
 read -p "enter the 2nd no:" b
 read -p "enter the 3rd no:" c
 
-function arthematic_Compute()
+function Arthematic_Compute()
 {
   echo "$(( $a+$b*$c ))"
 }
-result[$((count++))]="$( arthematic_Compute $(($a,$b,$c)) )"
+result[$((count++))]="$( Arthematic_Compute $(($a,$b,$c)) )"
 
-function arthematic_Compute_second()
+function Arthematic_Compute_Second()
 {
   echo "$(( $a*$b+$c ))"
 }
-result[$((count++))]="$( arthematic_Compute_second $(($a,$b,$c)) )"
+result[$((count++))]="$( Arthematic_Compute_Second $(($a,$b,$c)) )"
 
-function arthematic_Compute_third()
+function Arthematic_Compute_Third()
 {
   echo "$(( $c+$a/$b ))"
 }
-result[$((count++))]="$( arthematic_Compute_third $(($a,$b,$c)) )"
+result[$((count++))]="$( Arthematic_Compute_Third $(($a,$b,$c)) )"
 
-function arthematic_Compute_fourth()
+function Arthematic_Compute_Fourth()
 {
   echo "$(( $a%$b+$c ))"
 }
-result[$((count++))]="$( arthematic_Compute_fourth $(($a,$b,$c)) )"
+result[$((count++))]="$( Arthematic_Compute_Fourth $(($a,$b,$c)) )"
 
 echo "${result[@]}"
 echo "${!result[@]}"
@@ -36,7 +36,7 @@ do
      echo "${arr[i]}"
 done
 
-function sorting_Array_inDecending_order()
+function Sorting_Array_InDecending_Order()
 {
    for (( i=0; i<4; i++ ))
    do
@@ -52,10 +52,10 @@ function sorting_Array_inDecending_order()
    done
               echo ${arr[@]}
 }
-res="$( sorting_Array_inDecending_order ${arr[@]} )"
+res="$( Sorting_Array_InDecending_Order ${arr[@]} )"
 echo "decending order is :$res"
 
-function sorting_Array_inAscending_order()
+function Sorting_Array_InAscending_Order()
 {
    for (( i=0; i<4; i++ ))
    do
@@ -70,7 +70,7 @@ function sorting_Array_inAscending_order()
    done
               echo ${arr[@]}
 }
-res1="$( sorting_Array_inAscending_order ${arr[@]} )"
+res1="$( Sorting_Array_InAscending_Order ${arr[@]} )"
 echo "Ascending order is :$res1"
 
 
